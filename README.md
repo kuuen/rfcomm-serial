@@ -27,6 +27,7 @@ sudo ln -s /home/pi/work/python/rfcomm/rfcomm.service  /etc/systemd/system/rfcom
 sudo systemctl enable rfcomm.service  
 
 通信し合う機器とペアリングを行う  
+以下のコマンドを実行  
 sudo bluetoothctl  
 [bluetooth] power on  
 [bluetooth] discoverable on  
