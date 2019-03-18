@@ -1,17 +1,19 @@
 # rfcomm-serial
 
 ## Description 説明
-主にraspberry pi のhotaspdが不安定になった場合、BlueTooth通信で復帰を試みるためのもの
-
+主にraspberry pi のhotaspdが不安定になった場合、BlueToothのシリアル通信で復帰を試みるためのもの
 
 おまけ機能  
+GPIOに接続したLEDを点灯、消灯する
 
 ## Requirement
 作動環境  
 Raspberry Pi Model B and B+  
 OS raspbian 8.0  
-python 3.4.2  
 hostapd v0.8.x  
+python 3.4.2  
+pyserial 3.4 (# sudo pip3 install PySerial でインストール)  
+
 Bluetoothトングルを使用 型番を忘れた lsusbの結果は  
 Cambridge Silicon Radio, Ltd Bluetooth Dongle (HCI mode) と出た
 
@@ -24,4 +26,13 @@ sudo ln -s /home/pi/work/python/rfcomm/rfcomm.service  /etc/systemd/system/rfcom
 サービスを有効にする  
 sudo systemctl enable rfcomm.service  
 
-通信しあう機器とペアリングを行う  
+通信し合う機器とペアリングを行う  
+sudo bluetoothctl  
+[bluetooth] power on  
+[bluetooth] discoverable on  
+[bluetooth] agent on  
+[bluetooth] default-agent  
+"agent on"か"default-agent"の時に接続機器のペアリングを行ったはず  
+
+## Usage 使い方
+
