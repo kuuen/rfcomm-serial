@@ -8,7 +8,7 @@ GPIOに接続したLEDを点灯、消灯する
 
 ## Requirement
 作動環境  
-Raspberry Pi Model B and B+  
+Raspberry Pi Model B+  
 OS raspbian 8.0  
 hostapd v0.8.x  
 python 3.4.2  
