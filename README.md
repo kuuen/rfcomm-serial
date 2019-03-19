@@ -40,3 +40,13 @@ sudo bluetoothctl
 接続すると以下が送信される  
 Connecting to raspberrypi ...  
 Connected  
+
+しばらくして「要求受付開始」が送信されたらコマンドを入力  
+ledon -LED点灯  
+ledoff -LED消灯  
+wifi -wifi再起動  
+reboot -OS再起動  
+shutdown -OS終了  
+ch n -wifiチャンネル変更 nは変更するチャンネル1から13を指定する  
+
+reboot,shutdown以外は結果result:okで正常 result:ngで失敗が返ってくる。
