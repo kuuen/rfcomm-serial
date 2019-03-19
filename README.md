@@ -36,4 +36,7 @@ sudo bluetoothctl
 "agent on"か"default-agent"の時に接続機器のペアリングを行ったはず  
 
 ## Usage 使い方
-
+接続はAndroidでアプリSerial Bluetooth Terminalで行った  
+接続すると以下が送信される  
+Connecting to raspberrypi ...  
+Connected  
