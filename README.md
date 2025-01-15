@@ -27,7 +27,13 @@ su - を実行して root になる必要があります。
 最後から 2 番目の行を  
 KillMode=noneからKillMode=mixed  
 に変更して 、ファイルを保存します。再起動します。  
-  
+
+編集  
+sudo nano /etc/systemd/system/dbus-org.bluez.service 
+```
+ExecStart=/usr/libexec/bluetooth/bluetoothd  --compat
+ExecStartPost=/usr/bin/sdptool add --channel=22 SP
+```
   
 サービスに登録する  
 sudo ln -s /home/pi/work/python/rfcomm/rfcomm.service  /etc/systemd/system/rfcomm.service 等  
