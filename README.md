@@ -21,14 +21,16 @@ Cambridge Silicon Radio, Ltd Bluetooth Dongle (HCI mode) と出た
 ファイルを/home/pi/work/python/rfcomm/ に設置か書くパスを修正する  
 
 ## サービスで利用できるように設定する
+```
 su - を実行して root になる必要があります。  
 次に、 pluma、nano、または vi を使用して、 /lib/systemd/system/ plymouth-start.serviceファイルを編集します  
 。(使いやすいものを使用してください)  
 最後から 2 番目の行を  
 KillMode=noneからKillMode=mixed  
 に変更して 、ファイルを保存します。再起動します。  
+```
 
-編集  
+bluetoothの設定編集  
 sudo nano /etc/systemd/system/dbus-org.bluez.service 
 ```
 ExecStart=/usr/libexec/bluetooth/bluetoothd  --compat
