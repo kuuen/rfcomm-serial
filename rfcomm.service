@@ -4,7 +4,7 @@ After=bluetooth.service
 Requires=bluetooth.service
 
 [Service]
-ExecStart=/home/pi/work/python/rfcomm/register_rfcomm.sh
+ExecStart=/home/cito/work/python/rfcomm/register_rfcomm.sh
 
 #起動ユーザを指定
 #User=pi
